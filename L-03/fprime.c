@@ -26,7 +26,7 @@ void fprime(int num)
     }
 }
 
-int main(int Ac, char **Av)
+int main(int Ac,char **Av)
 {
     if(Ac == 2)
         fprime(atoi(Av[1]));
