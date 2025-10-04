@@ -3,13 +3,13 @@
 
 void fprime(int num)
 {
+    if(num == 0)
+        return;
     if(num == 1)
     {
         printf("1");
         return;
     }
-    if(num == 0)
-        return;
 
     int i = 2;
     while(num > 1)
@@ -18,7 +18,6 @@ void fprime(int num)
         {
             printf("%d",i);
             num = num / i;
-        
             if(num > 1)
                 printf("*");
         }
@@ -27,7 +26,7 @@ void fprime(int num)
     }
 }
 
-int main(int Ac,char **Av)
+int main(int Ac, char **Av)
 {
     if(Ac == 2)
         fprime(atoi(Av[1]));
