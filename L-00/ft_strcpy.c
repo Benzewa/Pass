@@ -1,4 +1,4 @@
-char    *ft_strcpy(char *s1, char *s2)
+char *ft_strcpy(char *s1, char *s2)
 {
     int i = 0;
     while(s2[i])
@@ -9,5 +9,4 @@ char    *ft_strcpy(char *s1, char *s2)
     s1[i] = '\0';
     return(s1);
 }
-
-// 4 October
+// 5 October
