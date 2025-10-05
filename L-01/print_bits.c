@@ -1,11 +1,10 @@
 #include <unistd.h>
-
-void	print_bits(unsigned char octet)
+void print_bits(unsigned char octet)
 {
     int i = 8;
     unsigned char bit;
 
-    while(i > 0)
+    while(i)
     {
         i--;
         bit = (octet >> i & 1) + '0';
@@ -13,4 +12,10 @@ void	print_bits(unsigned char octet)
     }
 }
 
-// 4 October
+
+// int main(void)
+// {
+//     print_bits(2);
+// }
+
+// 5 October
