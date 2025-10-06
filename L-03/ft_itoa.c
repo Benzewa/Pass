@@ -16,11 +16,11 @@ char	*ft_itoa(int nbr)
     if(!str)
         return(NULL);
 
+    str[len] = '\0';
     if(nbr < 0)
         str[0] = '-';
     if(nbr == 0)
         str[0] = '0';
-    str[len] = '\0';
 
     while(nbr)
     {
@@ -34,14 +34,11 @@ char	*ft_itoa(int nbr)
     return(str);
 }
 
-// #include <stdio.h>
 
-// int main()
+// #include <stdio.h>
+// int main(void)
 // {
-//     printf("%s\n",ft_itoa(123));
-//     printf("%s\n",ft_itoa(0));
-//     printf("%s\n",ft_itoa(1));
-//     printf("%s\n",ft_itoa(-123));
+//     printf("%s", ft_itoa(1));
 // }
 
-// 5 October
+// 6 October

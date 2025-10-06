@@ -14,11 +14,11 @@ void alpha_mirror(char *str)
     }
 }
 
-int main(int Ac,char **Av)
+int main(int Ac, char **Av)
 {
     if(Ac == 2)
         alpha_mirror(Av[1]);
     write(1,"\n",1);
 }
 
-// 4 October
+// 6 October

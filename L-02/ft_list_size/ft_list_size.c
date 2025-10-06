@@ -5,4 +5,5 @@ int	ft_list_size(t_list *begin_list)
         return(0);
     return(1 + ft_list_size(begin_list->next));
 }
-// 4 October
+
+// 6 October

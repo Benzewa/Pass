@@ -1,15 +1,15 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 void fprime(int num)
 {
-    if(num == 0)
-        return;
     if(num == 1)
     {
         printf("1");
         return;
     }
+    if(num == 0)
+        return;
 
     int i = 2;
     while(num > 1)
@@ -33,4 +33,4 @@ int main(int Ac, char **Av)
     printf("\n");
 }
 
-// 5 October
+// 6 October

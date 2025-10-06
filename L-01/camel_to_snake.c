@@ -7,8 +7,8 @@ void camel_to_snake(char *str)
     {
         if(str[i] && (str[i] >= 'A' && str[i] <= 'Z'))
         {
-            write(1,"_",1);
             str[i] = str[i] + 32;
+            write(1,"_",1);
         }
         write(1,&str[i],1);
         i++;
@@ -22,4 +22,4 @@ int main(int Ac, char **Av)
     write(1,"\n",1);
 }
 
-// 4 October
+// 6 October

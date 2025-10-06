@@ -9,7 +9,7 @@ void ft_putnbr(int num)
     write(1,&digit,1);
 }
 
-void fizz_buzz(void)
+void fizzbuzz(void)
 {
     int i = 1;
     while(i <= 100)
@@ -27,9 +27,9 @@ void fizz_buzz(void)
     }
 }
 
-int main()
+int main(void)
 {
-    fizz_buzz();
+    fizzbuzz();
 }
 
-// 4 October
+// 6 October
