@@ -10,10 +10,4 @@ int ft_strcmp(char *s1, char *s2)
     return(0);
 }
 
-// #include <stdio.h>
-// int main()
-// {
-//     printf("%d",ft_strcmp("abc","ab"));
-// }
-
-// 4 October
+// 6 October

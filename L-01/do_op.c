@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 void do_op(int num1, char operator, int num2)
 {
@@ -15,11 +15,11 @@ void do_op(int num1, char operator, int num2)
         printf("%d",num1 % num2);
 }
 
-int main(int Ac,char **Av)
+int main(int Ac, char **Av)
 {
-    if(Ac == 4)
-        do_op(atoi(Av[1]), Av[2][0], atoi(Av[3]));
+    if(Ac == 4 && (!Av[2][1]))
+        do_op(atoi(Av[1]),Av[2][0],atoi(Av[3]));
     printf("\n");
 }
 
-// 4 October
+// 6 October

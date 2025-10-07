@@ -38,8 +38,8 @@ void inter(char *str1, char *str2)
 int main(int Ac, char **Av)
 {
     if(Ac == 3)
-        inter(Av[1], Av[2]);
+        inter(Av[1],Av[2]);
     write(1,"\n",1);
 }
 
-// 5 October
+// 6 October

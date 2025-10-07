@@ -4,14 +4,16 @@ void repeat_alpha(char *str)
 {
     int i = 0;
     int counter = 0;
+
     while(str[i])
     {
-        if((str[i] >= 'a' && str[i] <= 'z'))
+        if(str[i] && (str[i] >= 'a' && str[i] <= 'z'))
             counter = str[i] - 'a' + 1;
-        else if((str[i] >= 'A' && str[i] <= 'Z'))
+        else if(str[i] && (str[i] >= 'A' && str[i] <= 'Z'))
             counter = str[i] - 'A' + 1;
         else
             write(1,&str[i],1);
+
         while(counter)
         {
             write(1,&str[i],1);
@@ -28,4 +30,4 @@ int main(int Ac, char **Av)
     write(1,"\n",1);
 }
 
-// 5 October
+// 6 October

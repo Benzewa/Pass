@@ -9,6 +9,7 @@ void rostring(char *str)
     while(str[i] && (str[i] != ' ' && str[i] != '\t'))
         i++;
     int end = i - 1;
+
     while(str[i] && (str[i] == ' ' || str[i] == '\t'))
         i++;
     while(str[i])
@@ -39,4 +40,4 @@ int main(int Ac, char **Av)
     write(1,"\n",1);
 }
 
-//  4 October
+// 6 October

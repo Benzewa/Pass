@@ -13,11 +13,11 @@ void rev_print(char *str)
     }
 }
 
-int main(int Ac,char **Av)
+int main(int Ac, char **Av)
 {
     if(Ac == 2)
         rev_print(Av[1]);
     write(1,"\n",1);
 }
 
-// 4 October
+// 6 October

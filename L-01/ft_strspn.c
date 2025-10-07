@@ -22,4 +22,5 @@ size_t	ft_strspn(const char *s, const char *reject)
     return(i);
 }
 
-// 5 October
+
+// 6 October

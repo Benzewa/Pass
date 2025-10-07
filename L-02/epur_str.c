@@ -6,15 +6,13 @@ void epur_str(char *str)
     while(str[i] && (str[i] == ' ' || str[i] == '\t'))
         i++;
     int start = i;
-
     while(str[i])
         i++;
     i--;
-    
     while(str[i] && (str[i] == ' ' || str[i] == '\t'))
         i--;
     int end = i;
-    
+
     while(start <= end)
     {
         if(str[start] && (str[start] != ' ' && str[start] != '\t'))
@@ -39,4 +37,4 @@ int main(int Ac, char **Av)
     write(1,"\n",1);
 }
 
-// 4 October
+// 6 October

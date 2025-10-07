@@ -1,11 +1,13 @@
 int	ft_atoi_base(const char *str, int str_base)
 {
     int i = 0;
-    int d = 0;
     int res = 0;
     int sign = 1;
+    int d = 0;
 
-    if(str[i] == '-')
+    while(str[i] && (str[i] == ' ' || str[i] == '\t'))
+        i++;
+    if(str[i] && (str[i] == '-'))
     {
         sign = -1;
         i++;
@@ -23,9 +25,10 @@ int	ft_atoi_base(const char *str, int str_base)
         if(str_base <= d)
             break;
         res = res * str_base + d;
-        i++;
+        i++; 
     }
     return(sign * res);
 }
 
-// 5 October
+
+// 6 October

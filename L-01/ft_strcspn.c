@@ -1,9 +1,9 @@
 #include <stdlib.h>
 size_t	ft_strcspn(const char *s, const char *reject)
 {
-    size_t i = 0;
-    size_t j = 0;
-    size_t Flag = 0;
+    int i = 0;
+    int j = 0;
+    int Flag = 0;
 
     while(s[i])
     {
@@ -22,4 +22,4 @@ size_t	ft_strcspn(const char *s, const char *reject)
     return(i);
 }
 
-// 5 October
+// 6 October

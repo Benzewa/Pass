@@ -1,5 +1,5 @@
 #include <stdlib.h>
-char    **ft_split(char *str)
+char **ft_split(char *str)
 {
     int i = 0;
     int j = 0;
@@ -9,6 +9,7 @@ char    **ft_split(char *str)
         i++;
 
     char **split = malloc(1024);
+
     while(str[i])
     {
         if(str[i] > ' ')
@@ -30,5 +31,4 @@ char    **ft_split(char *str)
     split[j] = 0;
     return(split);
 }
-
-// 4 October
+// 6 October
