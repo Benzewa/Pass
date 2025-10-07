@@ -1,5 +1,6 @@
 #include <unistd.h>
 
+
 void last_word(char *str)
 {
     int i = 0;
@@ -26,4 +27,4 @@ int main(int Ac, char **Av)
     write(1,"\n",1);
 }
 
-// 4 October
+// 7 October

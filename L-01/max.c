@@ -1,7 +1,8 @@
 int max(int* tab, unsigned int len)
 {
-    unsigned int i = 1;
     int maximum = tab[0];
+    unsigned int i = 1;
+    
     while(i < len)
     {
         if(tab[i] > maximum)
@@ -11,4 +12,4 @@ int max(int* tab, unsigned int len)
     return(maximum);
 }
 
-// 5 October
+// 7 October
