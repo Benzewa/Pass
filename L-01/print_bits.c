@@ -1,8 +1,9 @@
 #include <unistd.h>
+
 void print_bits(unsigned char octet)
 {
-    int i = 8;
     unsigned char bit;
+    int i = 8;
 
     while(i)
     {
@@ -12,10 +13,9 @@ void print_bits(unsigned char octet)
     }
 }
 
-
 // int main(void)
 // {
 //     print_bits(2);
 // }
 
-// 5 October
+// 7 October

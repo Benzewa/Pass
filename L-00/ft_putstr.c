@@ -1,5 +1,4 @@
 #include <unistd.h>
-
 void ft_putstr(char *str)
 {
     int i = 0;
@@ -10,4 +9,4 @@ void ft_putstr(char *str)
     }
 }
 
-// 4 October
+// 7 October
