@@ -9,5 +9,4 @@ void ft_putstr(char *str)
     }
 }
 
-
 // 7 October
