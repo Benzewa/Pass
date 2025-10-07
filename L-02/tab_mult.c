@@ -9,6 +9,29 @@ void ft_putnbr(int num)
     write(1,&digit,1);
 }
 
+int ft_atoi(char *str)
+{
+    int i = 0;
+    int res = 0;
+    int sign = 1;
+
+    while(str[i] == ' ' || str[i] == '\t')
+        i++;
+    if(str[i] == '-')
+    {
+        sign = -1;
+        i++;
+    }
+    if(str[i] == '+')
+        i++;
+    while(str[i] >= '0' && str[i] <= '9')
+    {
+        res = res * 10 +(str[i] - '0');
+        i++;
+    }
+    return(res * sign);
+}
+
 void tab_mult(int num)
 {
     int i = 1;
@@ -24,29 +47,6 @@ void tab_mult(int num)
     }
 }
 
-int ft_atoi(char *str)
-{
-    int i = 0;
-    int res = 0;
-    int sign = 1;
-
-    while(str[i] && (str[i] == ' ' || str[i] == '\t'))
-        i++;
-    if(str[i] && (str[i] == '-'))
-    {
-        sign = -1;
-        i++;
-    }
-    if(str[i] && (str[i] == '+'))
-        i++;
-    while(str[i] && (str[i] >= '0' && str[i] <= '9'))
-    {
-        res = res * 10 +(str[i] - '0');
-        i++;
-    }
-    return(res * sign);
-}
-
 int main(int Ac, char **Av)
 {
     if(Ac == 2)
@@ -55,4 +55,4 @@ int main(int Ac, char **Av)
         write(1,"\n",1);
 }
 
-// 4 October
+// 7 October
