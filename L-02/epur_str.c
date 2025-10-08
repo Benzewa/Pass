@@ -30,7 +30,6 @@ void epur_str(char *str)
     }
 }
 
-
 int main(int Ac, char **Av)
 {
     if (Ac == 2)

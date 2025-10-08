@@ -5,9 +5,9 @@ void sort_int_tab(int *tab, unsigned int size)
     int temp = 0;
     size--;
 
-    while(i < size)
+    while (i < size)
     {
-        if(tab[i] > tab[i + 1])
+        if (tab[i] > tab[i + 1])
         {
             temp = tab[i];
             tab[i] = tab[i + 1];

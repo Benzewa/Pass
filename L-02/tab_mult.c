@@ -3,10 +3,10 @@
 void ft_putnbr(int num)
 {
     char digit;
-    if(num > 9)
+    if (num > 9)
         ft_putnbr(num / 10);
     digit = num % 10 + '0';
-    write(1,&digit,1);
+    write(1, &digit, 1);
 }
 
 int ft_atoi(char *str)
@@ -15,44 +15,44 @@ int ft_atoi(char *str)
     int res = 0;
     int sign = 1;
 
-    while(str[i] == ' ' || str[i] == '\t')
+    while (str[i] == ' ' || str[i] == '\t')
         i++;
-    if(str[i] == '-')
+    if (str[i] == '-')
     {
         sign = -1;
         i++;
     }
-    if(str[i] == '+')
+    if (str[i] == '+')
         i++;
-    while(str[i] >= '0' && str[i] <= '9')
+    while (str[i] >= '0' && str[i] <= '9')
     {
-        res = res * 10 +(str[i] - '0');
+        res = res * 10 + (str[i] - '0');
         i++;
     }
-    return(res * sign);
+    return (res * sign);
 }
 
 void tab_mult(int num)
 {
     int i = 1;
-    while(i <= 9)
+    while (i <= 9)
     {
         ft_putnbr(i);
-        write(1," x ",3);
+        write(1, " x ", 3);
         ft_putnbr(num);
-        write(1," = ",3);
+        write(1, " = ", 3);
         ft_putnbr(i * num);
-        write(1,"\n",1);
+        write(1, "\n", 1);
         i++;
     }
 }
 
 int main(int Ac, char **Av)
 {
-    if(Ac == 2)
+    if (Ac == 2)
         tab_mult(ft_atoi(Av[1]));
     else
-        write(1,"\n",1);
+        write(1, "\n", 1);
 }
 
 // 7 October
