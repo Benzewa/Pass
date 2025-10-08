@@ -1,6 +1,6 @@
+
 #include <stdlib.h>
 #include <stdio.h>
-
 void do_op(int num1, char operator, int num2)
 {
     if (operator == '+')
@@ -14,7 +14,6 @@ void do_op(int num1, char operator, int num2)
     else if (operator == '%')
         printf("%d", num1 % num2);
 }
-
 int main(int Ac, char **Av)
 {
     if (Ac == 4 && !Av[2][1])

@@ -1,5 +1,5 @@
-#include <unistd.h>
 
+#include <unistd.h>
 void snake_to_camel(char *str)
 {
     int i = 0;

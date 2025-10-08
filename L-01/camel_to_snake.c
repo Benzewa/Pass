@@ -1,5 +1,5 @@
-#include <unistd.h>
 
+#include <unistd.h>
 void camel_to_snake(char *str)
 {
     int i = 0;
@@ -14,7 +14,6 @@ void camel_to_snake(char *str)
         i++;
     }
 }
-
 int main(int Ac, char **Av)
 {
     if (Ac == 2)

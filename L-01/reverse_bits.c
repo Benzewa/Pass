@@ -1,3 +1,4 @@
+
 unsigned char	reverse_bits(unsigned char octet)
 {
 	int		i = 8;

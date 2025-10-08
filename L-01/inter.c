@@ -1,5 +1,5 @@
-#include <unistd.h>
 
+#include <unistd.h>
 int is_found(char *str, char c, int position)
 {
     int i = 0;
@@ -11,7 +11,6 @@ int is_found(char *str, char c, int position)
     }
     return (0);
 }
-
 void inter(char *str1, char *str2)
 {
     int i = 0;

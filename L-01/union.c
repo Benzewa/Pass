@@ -1,5 +1,5 @@
-#include <unistd.h>
 
+#include <unistd.h>
 int is_found(char *str,char c,int position)
 {
     int i = 0;

@@ -1,29 +1,5 @@
+
 #include <unistd.h>
-
-void ft_putnbr(int num)
-{
-    char digit;
-    if (num > 9)
-        ft_putnbr(num / 10);
-    digit = num % 10 + '0';
-    write(1, &digit, 1);
-}
-
-int is_prime(int num)
-{
-    int counter = 0;
-    int i = 1;
-    while (i <= num)
-    {
-        if (num % i == 0)
-            counter++;
-        i++;
-    }
-    if (counter == 2)
-        return (1);
-    return (0);
-}
-
 int ft_atoi(char *str)
 {
     int i = 0;
@@ -50,6 +26,28 @@ int ft_atoi(char *str)
     return (res * sign);
 }
 
+void ft_putnbr(int num)
+{
+    char digit;
+    if (num > 9)
+        ft_putnbr(num / 10);
+    digit = num % 10 + '0';
+    write(1, &digit, 1);
+}
+int is_prime(int num)
+{
+    int counter = 0;
+    int i = 1;
+    while (i <= num)
+    {
+        if (num % i == 0)
+            counter++;
+        i++;
+    }
+    if (counter == 2)
+        return (1);
+    return (0);
+}
 void add_prime_sum(int num)
 {
     int i = 1;
@@ -63,7 +61,6 @@ void add_prime_sum(int num)
     }
     ft_putnbr(sum);
 }
-
 int main(int Ac, char **Av)
 {
     if (Ac == 2)
@@ -72,5 +69,4 @@ int main(int Ac, char **Av)
         write(1, "0", 1);
     write(1, "\n", 1);
 }
-
 // 7 October

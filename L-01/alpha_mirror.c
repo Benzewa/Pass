@@ -1,5 +1,5 @@
-#include <unistd.h>
 
+#include <unistd.h>
 void alpha_mirror(char *str)
 {
     int i = 0;
@@ -13,7 +13,6 @@ void alpha_mirror(char *str)
         i++;
     }
 }
-
 int main(int Ac, char **Av)
 {
     if (Ac == 2)

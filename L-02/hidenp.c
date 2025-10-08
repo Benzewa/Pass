@@ -1,5 +1,5 @@
-#include <unistd.h>
 
+#include <unistd.h>
 void hidenp(char *str1, char *str2)
 {
     int i = 0;

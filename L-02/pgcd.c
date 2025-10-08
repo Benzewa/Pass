@@ -1,6 +1,6 @@
+
 #include <stdio.h>
 #include <stdlib.h>
-
 void pgcd(int num1, int num2)
 {
     int i = 1;
