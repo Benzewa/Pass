@@ -10,4 +10,4 @@ char *ft_strcpy(char *s1, char *s2)
     return(s1);
 }
 
-// 6 October
+// 7 October

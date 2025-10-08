@@ -2,7 +2,7 @@
 int *ft_rrange(int start, int end)
 {
     int len = 0;
-    if(start <= end)
+    if (start <= end)
         len = end - start;
     else
         len = start - end;
@@ -12,9 +12,9 @@ int *ft_rrange(int start, int end)
     int *ptr = malloc(sizeof(int) * len);
     int i = 0;
 
-    if(start <= end)
+    if (start <= end)
     {
-        while(i < len)
+        while (i < len)
         {
             ptr[i] = end;
             end = end - 1;
@@ -23,14 +23,14 @@ int *ft_rrange(int start, int end)
     }
     else
     {
-        while(i < len)
+        while (i < len)
         {
             ptr[i] = end;
             end = end + 1;
             i++;
         }
     }
-    return(ptr);
+    return (ptr);
 }
 
-// 6 October
+// 7 October

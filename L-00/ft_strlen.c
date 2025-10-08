@@ -6,4 +6,4 @@ int ft_strlen(char *str)
     return(i);
 }
 
-// 6 October
+// 7 October

@@ -1,20 +1,20 @@
 #include <stdlib.h>
+
 int *ft_range(int start, int end)
 {
     int len = 0;
-    if(start <= end)
+    if (start < end)
         len = end - start;
     else
         len = start - end;
+    len++;
 
-    len = len + 1;
+    int *ptr = malloc(sizeof(int) * (len));
 
-    int *ptr = malloc(sizeof(int) * len);
     int i = 0;
-
-    if(start <= end)
+    if (start <= end)
     {
-        while(i < len)
+        while (i < len)
         {
             ptr[i] = start;
             start = start + 1;
@@ -23,14 +23,14 @@ int *ft_range(int start, int end)
     }
     else
     {
-        while(i < len)
+        while (i < len)
         {
             ptr[i] = start;
             start = start - 1;
             i++;
         }
     }
-    return(ptr);
+    return (ptr);
 }
 
-// 6 October
+// 7 October

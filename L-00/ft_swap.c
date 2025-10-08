@@ -5,4 +5,4 @@ void ft_swap(int *a, int *b)
     *b = temp;
 }
 
-// 5 October
+// 7 October

@@ -3,23 +3,23 @@
 void camel_to_snake(char *str)
 {
     int i = 0;
-    while(str[i])
+    while (str[i])
     {
-        if(str[i] && (str[i] >= 'A' && str[i] <= 'Z'))
+        if (str[i] && (str[i] >= 'A' && str[i] <= 'Z'))
         {
             str[i] = str[i] + 32;
-            write(1,"_",1);
+            write(1, "_", 1);
         }
-        write(1,&str[i],1);
+        write(1, &str[i], 1);
         i++;
     }
 }
 
 int main(int Ac, char **Av)
 {
-    if(Ac == 2)
+    if (Ac == 2)
         camel_to_snake(Av[1]);
-    write(1,"\n",1);
+    write(1, "\n", 1);
 }
 
-// 6 October
+// 7 October
