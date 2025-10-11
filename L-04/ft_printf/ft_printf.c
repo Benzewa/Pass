@@ -42,11 +42,13 @@ void ft_puthex(unsigned int num, int *d)
   write(1, &hex[num % 16], 1);
   (*d)++;
 }
+
 int ft_printf(const char *format, ...)
 {
   int d = 0;
   va_list pa;
   va_start(pa, format);
+
   while (*format)
   {
     if (*format == '%' && *(format + 1))
@@ -75,4 +77,4 @@ int ft_printf(const char *format, ...)
   return (d);
 }
 
-// 11 October
+// 11 October 2025
