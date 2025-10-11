@@ -42,8 +42,6 @@ void ft_puthex(unsigned int n, int *d)
   (*d)++;
 }
 
-// search on terminal for <man stdarg>, you'll find the format
-
 int ft_printf(const char *format, ...)
 {
   va_list ap;           // Variable ap
