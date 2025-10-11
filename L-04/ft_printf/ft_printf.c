@@ -44,35 +44,35 @@ void ft_puthex(unsigned int n, int *d)
 
 int ft_printf(const char *format, ...)
 {
-  va_list ap;           // Variable ap
-  int d = 0;            // Total chars printed
-  va_start(ap, format); // Start ap
-  while (*format)       // Loop format string
+  va_list ap;
+  int d = 0;
+  va_start(ap, format);
+  while (*format)
   {
-    if (*format == '%' && *(format + 1)) // Specifier check
+    if (*format == '%' && *(format + 1))
     {
-      format++; // Skip '%'
+      format++;
       if (*format == 's')
         ft_putstr(va_arg(ap, char *), &d);
       else if (*format == 'd')
         ft_putnbr(va_arg(ap, int), &d);
       else if (*format == 'x')
         ft_puthex(va_arg(ap, unsigned int), &d);
-      else // Unknown specifier
+      else
       {
         write(1, format, 1);
         d++;
       }
     }
-    else // Normal char
+    else
     {
       write(1, format, 1);
       d++;
     }
-    format++; // Next char
+    format++;
   }
-  va_end(ap); // Clean up
-  return (d); // Return total
+  va_end(ap);
+  return (d);
 }
 
 // int main(void)
