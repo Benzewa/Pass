@@ -1,3 +1,5 @@
+// INT_MIN = -2147483648
+
 #include <unistd.h>
 #include <stdarg.h>
 
@@ -7,57 +9,55 @@ void ft_putstr(char *str, int *d)
     str = "(null)";
   while (*str)
   {
-    write(1, str++, 1);
+    write(1, str, 1);
+    str++;
     (*d)++;
   }
 }
-
-void ft_putnbr(int n, int *d)
+void ft_putnbr(int num, int *d)
 {
-  char c;
-  if (n == -2147483648)
+  if (num == -2147483648)
   {
     ft_putstr("-2147483648", d);
     return;
   }
-  if (n < 0)
+  if (num < 0)
   {
     write(1, "-", 1);
+    num = num * -1;
     (*d)++;
-    n = -n;
   }
-  if (n > 9)
-    ft_putnbr(n / 10, d);
-  c = (n % 10) + '0';
+  char c;
+  if (num > 9)
+    ft_putnbr(num / 10, d);
+  c = (num % 10) + '0';
   write(1, &c, 1);
   (*d)++;
 }
-
-void ft_puthex(unsigned int n, int *d)
+void ft_puthex(unsigned int num, int *d)
 {
   char *hex = "0123456789abcdef";
-  if (n >= 16)
-    ft_puthex(n / 16, d);
-  write(1, &hex[n % 16], 1);
+  if (num > 15)
+    ft_puthex(num / 16, d);
+  write(1, &hex[num % 16], 1);
   (*d)++;
 }
-
 int ft_printf(const char *format, ...)
 {
-  va_list ap;
   int d = 0;
-  va_start(ap, format);
+  va_list pa;
+  va_start(pa, format);
   while (*format)
   {
     if (*format == '%' && *(format + 1))
     {
       format++;
       if (*format == 's')
-        ft_putstr(va_arg(ap, char *), &d);
+        ft_putstr(va_arg(pa, char *), &d);
       else if (*format == 'd')
-        ft_putnbr(va_arg(ap, int), &d);
+        ft_putnbr(va_arg(pa, int), &d);
       else if (*format == 'x')
-        ft_puthex(va_arg(ap, unsigned int), &d);
+        ft_puthex(va_arg(pa, unsigned int), &d);
       else
       {
         write(1, format, 1);
@@ -71,15 +71,8 @@ int ft_printf(const char *format, ...)
     }
     format++;
   }
-  va_end(ap);
+  va_end(pa);
   return (d);
 }
 
-// int main(void)
-// {
-//     ft_printf("Hello %s, %d, %x\n", "world", -42, 255);
-//     ft_printf("%s\n", "toto");
-//     ft_printf("Magic %s is %d\n", "number", 42);
-//     ft_printf("Hexadecimal for %d is %x\n", 42, 42);
-//     return (0);
-// }
+// 11 October
