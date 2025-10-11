@@ -1,47 +1,45 @@
 #include <unistd.h>
 #include <stdarg.h>
 
-// search on terminal for <man stdarg>
-
 void ft_putstr(char *str, int *d)
 {
-  if (!str)         // If string is NULL
-    str = "(null)"; // Replace with "(null)"
-  while (*str)      // Loop through each char
+  if (!str)
+    str = "(null)";
+  while (*str)
   {
-    write(1, str++, 1); // Write char, move pointer
-    (*d)++;             // Increment d
+    write(1, str++, 1);
+    (*d)++;
   }
 }
 
 void ft_putnbr(int n, int *d)
 {
-  char c;               // Temp char for digit
-  if (n == -2147483648) // Special case for INT_MIN
+  char c;
+  if (n == -2147483648)
   {
-    ft_putstr("-2147483648", d); // Print directly
+    ft_putstr("-2147483648", d);
     return;
   }
-  if (n < 0) // Handle negatives
+  if (n < 0)
   {
-    write(1, "-", 1); // Print minus
+    write(1, "-", 1);
     (*d)++;
-    n = -n; // Make positive
+    n = -n;
   }
-  if (n > 9)              // Multi-digit
-    ft_putnbr(n / 10, d); // Recurse for higher digits
-  c = (n % 10) + '0';     // Convert last digit to char
-  write(1, &c, 1);        // Print it
-  (*d)++;                 // Increment d
+  if (n > 9)
+    ft_putnbr(n / 10, d);
+  c = (n % 10) + '0';
+  write(1, &c, 1);
+  (*d)++;
 }
 
 void ft_puthex(unsigned int n, int *d)
 {
-  char *hex = "0123456789abcdef"; // Hex lookup
-  if (n >= 16)                    // Multi-digit hex
-    ft_puthex(n / 16, d);         // Recurse
-  write(1, &hex[n % 16], 1);      // Print last digit
-  (*d)++;                         // Increment d
+  char *hex = "0123456789abcdef";
+  if (n >= 16)
+    ft_puthex(n / 16, d);
+  write(1, &hex[n % 16], 1);
+  (*d)++;
 }
 
 // search on terminal for <man stdarg>, you'll find the format
